@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Up - Job Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/interactivity.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 style="font-size: large; font-weight: bold; color: black;">True Up</h1>
+        <p style="font-size: small; color: black;">Find or Post Jobs Easily!</p>
+        <button id="loginBtn" onclick="window.location.href='login.html'" style="cursor: pointer;">Login</button>
+    </header>
+    <script>
+        // Adding hover effect for the Login button
+        document.getElementById('loginBtn').addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#0056b3'; // Darker shade for hover
+        });
+        document.getElementById('loginBtn').addEventListener('mouseout', function() {
+            this.style.backgroundColor = '#007bff'; // Original color
+        });
+    </script>
+</body>
+</html>

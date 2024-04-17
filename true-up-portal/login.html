@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to True Up</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/interactivity.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">Login to True Up</h1>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required class="input-field">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required class="input-field">
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+    <script>
+        // Assuming the existence of a function handleLogin in interactivity.js
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Placeholder for authentication logic
+            // In a real application, here you would send the username and password to the server
+            // For demonstration, we'll just log to the console and redirect on success
+            console.log(`Logging in with username: ${username} and password: ${password}`);
+            
+            // Simulate successful login
+            alert('Login successful!');
+            window.location.href = 'profile.html'; // Redirect to profile page on successful login
+        }
+    </script>
+</body>
+</html>
+```
