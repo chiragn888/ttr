@@ -1,0 +1,22 @@
+{
+  "name": "tech_jobs_site",
+  "version": "1.0.0",
+  "description": "A web application for tech job listings",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "Your Name or Organization",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/tech_jobs_site.git"
+  },
+  "keywords": ["tech", "jobs", "web application"]
+}
