@@ -1,114 +1,39 @@
-/* main.css - Styling for the True Up job portal */
+/* Assuming index.css handles basic resets and body styling, so no redundancy here */
+/* Specific component styles assumed not to be in index.css */
 
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.job-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    margin-bottom: 20px;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
+.job-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Utility classes */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Header styles */
-header h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-}
-
-/* Form styling */
-form {
-    background: #ffffff;
+.login-container {
+    width: 300px;
+    margin: 50px auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .form-group {
     margin-bottom: 20px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-field,
-textarea {
+.input-field {
     width: 100%;
     padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
-/* Button styling */
-button {
-    display: inline-block;
-    background: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-/* Job card styling */
-.job-card {
-    background: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.job-card h2 {
-    margin-bottom: 10px;
-}
-
-.job-card p {
-    margin-bottom: 5px;
-}
-
-/* Login and Profile container */
-.login-container,
 .profile-update-form {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Accessibility improvements */
-input:focus,
-textarea:focus,
-button:focus {
-    outline: 2px solid #007bff;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
+    margin-top: 20px;
 }
