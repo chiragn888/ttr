@@ -8,19 +8,16 @@
     <script src="js/interactivity.js" defer></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="images/true-up-logo.png" alt="True Up Logo">
+        <button id="applyJobsBtn" onclick="window.location.href='ttr/true-up-portal/job-listing.html'">Apply Jobs</button>
+        <button id="postJobsBtn" onclick="window.location.href='ttr/true-up-portal/job-posting.html'">Post Jobs</button>
+        <button id="loginBtn" onclick="window.location.href='login.html'" style="cursor: pointer;"></button>
+    </nav>
     <header>
-        <h1 style="font-size: large; font-weight: bold; color: black;">True Up</h1>
-        <p style="font-size: small; color: black;">Find or Post Jobs Easily!</p>
-        <button id="loginBtn" onclick="window.location.href='login.html'" style="cursor: pointer;">Login</button>
+        <h1>True Up</h1>
+        <p>Find or Post Jobs Easily!</p>
     </header>
-    <script>
-        // Adding hover effect for the Login button
-        document.getElementById('loginBtn').addEventListener('mouseover', function() {
-            this.style.backgroundColor = '#0056b3'; // Darker shade for hover
-        });
-        document.getElementById('loginBtn').addEventListener('mouseout', function() {
-            this.style.backgroundColor = '#007bff'; // Original color
-        });
-    </script>
 </body>
 </html>

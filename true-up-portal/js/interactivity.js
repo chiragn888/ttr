@@ -92,11 +92,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 companyName: document.getElementById('companyName').value,
                 position: document.getElementById('position').value,
                 salary: document.getElementById('salary').value,
-                description: document.getElementById('description').value
+                description: document.getElementById('jobDescription').value // Updated according to instructions
             });
         });
     }
 
     // Activate button hover effects
     addHoverEffects();
+
+    // New code for handling navigation button clicks
+    document.getElementById('applyJobsBtn').addEventListener('click', function() {
+        window.location.href = 'job-listing.html'; // Corrected relative path
+    });
+
+    document.getElementById('postJobsBtn').addEventListener('click', function() {
+        window.location.href = 'job-posting.html'; // Corrected relative path
+    });
 });
+```
