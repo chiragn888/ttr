@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>True Up - Job Portal</title>
     <link rel="stylesheet" href="styles/main.css">
+    <!-- Linking new CSS files -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <script src="js/interactivity.js" defer></script>
+    <!-- Linking dropdown functionality -->
+    <script src="js/dropdown.js" defer></script>
 </head>
 <body>
     <header>
+        <!-- Updated header section with SVG logo -->
+        <img src="images/logo.svg" alt="True Up Logo" style="height: 50px;">
         <h1 style="font-size: large; font-weight: bold; color: black;">True Up</h1>
         <p style="font-size: small; color: black;">Find or Post Jobs Easily!</p>
+        <!-- Updated button links -->
         <button id="loginBtn" onclick="window.location.href='login.html'" style="cursor: pointer;">Login</button>
+        <button id="joinNowBtn" onclick="window.location.href='register.html'" style="cursor: pointer;">Join Now</button>
+        <button id="searchJobsBtn" onclick="window.location.href='search.html'" style="cursor: pointer;">Search for Jobs</button>
     </header>
     <script>
         // Adding hover effect for the Login button

@@ -1,0 +1,33 @@
+/* Responsive design styles for index.html page */
+@media only screen and (max-width: 320px) {
+    /* Mobile styles */
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+    /* Tablet styles */
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    /* Desktop styles */
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 30px;
+    }
+}

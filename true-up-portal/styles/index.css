@@ -1,0 +1,48 @@
+/* Primary Color Scheme & Typography Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+
+    /* Typography */
+    --font-family: 'Open Sans', sans-serif;
+    --font-size: 16px;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout */
+header, footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header, footer {
+        padding: 0.5em 0;
+    }
+}
+
+/* More specific responsive styles can be found in responsive.css */
+/* HOWEVER, as per instructions, details in responsive.css are not to be modified or included here. */
