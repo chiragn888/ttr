@@ -9,18 +9,23 @@
 </head>
 <body>
     <header>
+        <div class="navigation"></div> <!-- Placeholder for the navigation bar updated to match CSS selectors -->
         <h1 style="font-size: large; font-weight: bold; color: black;">True Up</h1>
         <p style="font-size: small; color: black;">Find or Post Jobs Easily!</p>
         <button id="loginBtn" onclick="window.location.href='login.html'" style="cursor: pointer;">Login</button>
     </header>
     <script>
-        // Adding hover effect for the Login button
-        document.getElementById('loginBtn').addEventListener('mouseover', function() {
-            this.style.backgroundColor = '#0056b3'; // Darker shade for hover
-        });
-        document.getElementById('loginBtn').addEventListener('mouseout', function() {
-            this.style.backgroundColor = '#007bff'; // Original color
-        });
+        // Load the navigation bar dynamically
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('.navigation').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading the navigation bar:', error);
+            });
+
+        // Removed inline JavaScript hover effects to use CSS for styling
     </script>
 </body>
 </html>
