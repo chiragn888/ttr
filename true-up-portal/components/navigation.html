@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Component</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="index.html">True Up</a>
+        <a href="job-listing.html">Apply Jobs</a>
+        <a href="job-posting.html">Post Jobs</a>
+        <!-- Implement login button logic -->
+        <button onclick="location.href='login.html';">Login</button>
+    </nav>
+    <script>
+        // Basic navigation interaction logic
+        document.querySelectorAll('.navigation a').forEach(item => {
+            item.addEventListener('click', event => {
+                // Highlight the current page link
+                document.querySelectorAll('.navigation a').forEach(a => {
+                    a.classList.remove('active');
+                });
+                event.target.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

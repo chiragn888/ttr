@@ -1,114 +1,53 @@
-/* main.css - Styling for the True Up job portal */
-
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Utility classes */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Header styles */
-header h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-}
-
-/* Form styling */
-form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-field,
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Button styling */
-button {
-    display: inline-block;
-    background: #007bff;
+/* Navigation bar styling */
+.nav-bar {
+    background-color: #007bff; /* Matching the website's color scheme */
     color: #ffffff;
-    border: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly */
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #d4d4d4;
+}
+
+/* Making the Login button stand out */
+.nav-item.login-button a {
+    background-color: #ff4757; /* A contrasting color */
     padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    border: 2px solid #ff4757; /* Adds a border to make it stand out */
 }
 
-button:hover {
-    background: #0056b3;
+.nav-item.login-button a:hover {
+    background-color: transparent;
+    color: #ff4757;
 }
 
-/* Job card styling */
-.job-card {
-    background: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.job-card h2 {
-    margin-bottom: 10px;
-}
-
-.job-card p {
-    margin-bottom: 5px;
-}
-
-/* Login and Profile container */
-.login-container,
-.profile-update-form {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Accessibility improvements */
-input:focus,
-textarea:focus,
-button:focus {
-    outline: 2px solid #007bff;
-}
-
-/* Responsive design */
+/* Responsive design adjustments for the navigation bar */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
+    .nav-bar {
+        flex-direction: column; /* Stacks the nav items vertically on smaller screens */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Adjusts spacing for stacked items */
+    }
+
+    /* Adjust font size for smaller screens */
+    .nav-item a {
+        font-size: 14px;
     }
 }
