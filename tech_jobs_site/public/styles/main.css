@@ -1,0 +1,155 @@
+/* main.css - Styles for Tech Jobs Site */
+
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li, nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Basic setup */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 40px 30px; /* Increased padding for generous spacing */
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px; /* Added for generous spacing */
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px; /* Increased padding for generous spacing */
+}
+
+.main-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px; /* Increased for generous spacing */
+}
+
+.main-content p {
+    font-size: 24px;
+    margin-bottom: 30px; /* Increased for generous spacing */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #0779e4;
+    color: #fff;
+    padding: 15px 25px; /* Adjusted for better visibility and comfort */
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: none;
+    color: #0779e4;
+    border: 2px solid #0779e4;
+    padding: 13px 23px; /* Adjusted padding */
+}
+
+.btn-secondary:hover {
+    background: #0779e4;
+    color: #fff;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+/* Floating Graphics/Icons Background */
+.background-icons {
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/tech-logos-background.png'); /* Placeholder for actual image path */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .main-content, header, nav {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
