@@ -1,70 +1,27 @@
+<!-- job-listing.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Available Jobs - True Up</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="js/interactivity.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Job Listings</title>
 </head>
 <body>
-    <header>
-        <h1>Available Jobs</h1>
-    </header>
-    <main id="job-listings">
-        <!-- Job listings will be dynamically loaded here -->
-    </main>
-    <script>
-        // Assuming the jobs are fetched from an API or a static JSON file
-        // This is a placeholder array to simulate fetched job data
-        const jobs = [
-            {
-                title: "Frontend Developer",
-                company: "Tech Innovations Inc.",
-                position: "Full-time",
-                salary: "$85,000 - $95,000",
-                description: "We are looking for a skilled Frontend Developer to join our team."
-            },
-            {
-                title: "Backend Developer",
-                company: "Web Solutions Ltd.",
-                position: "Part-time",
-                salary: "$75,000 - $85,000",
-                description: "Seeking a passionate Backend Developer to work on exciting projects."
-            }
-            // Add more jobs as needed
-        ];
+  <!-- Include the navigation bar -->
+  <div class="navigation-bar">
+    <!-- Include the navigation.html content -->
+    <!-- navigation.html content goes here -->
+  </div>
 
-        function displayJobs(jobs) {
-            const listings = document.getElementById('job-listings');
-            jobs.forEach(job => {
-                const jobCard = document.createElement('div');
-                jobCard.className = 'job-card';
-                jobCard.innerHTML = `
-                    <h2>${job.title}</h2>
-                    <p><strong>Company:</strong> ${job.company}</p>
-                    <p><strong>Position:</strong> ${job.position}</p>
-                    <p><strong>Salary:</strong> ${job.salary}</p>
-                    <p>${job.description}</p>
-                    <button onclick="applyJob()">Apply</button>
-                    <button onclick="saveJob()">Save</button>
-                `;
-                listings.appendChild(jobCard);
-            });
-        }
+  <!-- Job listings -->
+  <div class="job-listings">
+    <h1>Available Jobs</h1>
+    <!-- Placeholder for dynamic job listings -->
+    <div id="dynamicJobListings"></div>
+    <!-- Or use script to insert job listings here -->
+  </div>
 
-        // Placeholder functions for Apply and Save buttons
-        function applyJob() {
-            alert("Apply functionality to be implemented.");
-        }
-
-        function saveJob() {
-            alert("Save functionality to be implemented.");
-        }
-
-        // Load jobs on page load
-        window.onload = () => displayJobs(jobs);
-    </script>
+  <script src="js/interactivity.js"></script>
 </body>
 </html>
-```

@@ -1,53 +1,33 @@
+<!-- job-posting.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post a Job - True Up</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="js/interactivity.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Post a Job</title>
 </head>
 <body>
-    <header>
-        <h1>Post a Job</h1>
-    </header>
-    <main>
-        <form id="jobPostForm">
-            <div class="form-group">
-                <label for="jobTitle">Job Title:</label>
-                <input type="text" id="jobTitle" name="jobTitle" class="input-field" required>
-            </div>
-            <div class="form-group">
-                <label for="companyName">Company Name:</label>
-                <input type="text" id="companyName" name="companyName" class="input-field" required>
-            </div>
-            <div class="form-group">
-                <label for="position">Position:</label>
-                <input type="text" id="position" name="position" class="input-field" required>
-            </div>
-            <div class="form-group">
-                <label for="salary">Salary:</label>
-                <input type="text" id="salary" name="salary" class="input-field" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="5" class="input-field" required></textarea>
-            </div>
-            <button type="submit" id="postJobBtn">Post</button>
-        </form>
-    </main>
-    <script>
-        document.getElementById('jobPostForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Assuming a function submitJobPosting exists in interactivity.js
-            submitJobPosting({
-                jobTitle: document.getElementById('jobTitle').value,
-                companyName: document.getElementById('companyName').value,
-                position: document.getElementById('position').value,
-                salary: document.getElementById('salary').value,
-                description: document.getElementById('description').value
-            });
-        });
-    </script>
+  <!-- Include navigation bar -->
+  <div class="navigation">
+    <!-- Include the content of navigation.html here -->
+  </div>
+  <div class="job-posting-form">
+    <!-- Provide a form for employers to post new job listings -->
+    <h1>Post a New Job</h1>
+    <form id="jobPostForm">
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" id="jobTitle" name="jobTitle"><br><br>
+      <label for="jobDescription">Job Description:</label><br>
+      <textarea id="jobDescription" name="jobDescription"></textarea><br><br>
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" name="companyName"><br><br>
+      <label for="position">Position:</label>
+      <input type="text" id="position" name="position"><br><br>
+      <label for="salary">Salary:</label>
+      <input type="text" id="salary" name="salary"><br><br>
+      <input type="submit" value="Post Job">
+    </form>
+  </div>
 </body>
 </html>
