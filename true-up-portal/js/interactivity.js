@@ -22,6 +22,7 @@ function updateProfile({ name, email, bio }) {
     
     // Simulate successful profile update
     alert('Profile updated successfully!');
+    window.location.href = 'job-listing.html'; // Redirect to job-listing page after successful profile update
 }
 
 // Function to handle job posting form submission
@@ -99,4 +100,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Activate button hover effects
     addHoverEffects();
 });
-```
