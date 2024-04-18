@@ -9,18 +9,27 @@
 </head>
 <body>
     <header>
-        <h1 style="font-size: large; font-weight: bold; color: black;">True Up</h1>
-        <p style="font-size: small; color: black;">Find or Post Jobs Easily!</p>
-        <button id="loginBtn" onclick="window.location.href='login.html'" style="cursor: pointer;">Login</button>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="True Up Logo" class="logo">
+        </div>
+        <nav class="header-nav">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Hire on TrueUp</a>
+            <a href="login.html" class="nav-link">Login</a>
+            <a href="register.html" class="nav-link">Sign Up</a>
+        </nav>
     </header>
+    <main>
+        <div class="main-content">
+            <button id="joinNowBtn" class="main-btn" onclick="window.location.href='login.html'">JOIN NOW</button>
+            <a href="search-jobs.html" class="secondary-link">Search jobs</a>
+        </div>
+    </main>
+    <div class="background-logos">
+        <!-- Background logos will be styled in main.css -->
+    </div>
     <script>
-        // Adding hover effect for the Login button
-        document.getElementById('loginBtn').addEventListener('mouseover', function() {
-            this.style.backgroundColor = '#0056b3'; // Darker shade for hover
-        });
-        document.getElementById('loginBtn').addEventListener('mouseout', function() {
-            this.style.backgroundColor = '#007bff'; // Original color
-        });
+        // The hover effect for the Login button will be handled in main.css
     </script>
 </body>
-</html>
