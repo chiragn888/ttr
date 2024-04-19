@@ -36,6 +36,20 @@
             text-decoration: none;
             color: #000;
             font-weight: 500;
+            padding: 15px; /* Make all the buttons same size */
+            display: flex;
+            flex-direction: column; /* Dropdown list will be displayed in vertical rows */
+        }
+        .dropdown-content {
+            display: none; /* Hide the dropdown list by default */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block; /* Display the dropdown list in vertical rows on hover */
         }
         .main-content {
             position: absolute;
@@ -45,7 +59,7 @@
             text-align: center;
         }
         .main-btn, .secondary-link {
-            padding: 15px 30px;
+            padding: 15px; /* Make all the buttons same size */
             background-color: #007BFF;
             color: white;
             border: none;
