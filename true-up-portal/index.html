@@ -30,34 +30,31 @@
         }
         .header-nav {
             display: flex;
-            flex-direction: column; /* Changed to display buttons one below the other */
+            flex-direction: row; /* Reverted back to display buttons one beside the other */
             gap: 15px;
         }
         .nav-link {
             text-decoration: none;
             color: #000;
             font-weight: 500;
-            padding: 15px; /* Make all the buttons same size */
-            display: flex;
-            flex-direction: column; /* Dropdown list will be displayed in vertical rows */
-            background-color: #28a745; /* Change button color to green */
-            margin: 10px 0; /* Add margin to the buttons */
-            border-radius: 5px; /* Add border-radius to the buttons */
-            color: white; /* Change text color to white */
+            padding: 10px 20px; /* Reverted back to original button padding */
+            background-color: #28a745; /* Reverted back to original button color */
+            border-radius: 5px; /* Reverted back to original border-radius */
+            color: white; /* Reverted back to original text color */
         }
         .nav-link:hover {
-            background-color: #218838; /* Change button color on hover */
+            background-color: #218838; /* Reverted back to original button color on hover */
         }
         .dropdown-content {
             display: none; /* Hide the dropdown list by default */
             position: absolute;
-            background-color: #f9f9f9;
+            background-color: transparent;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: none;
             z-index: 1;
         }
         .dropdown:hover .dropdown-content {
-            display: block; /* Display the dropdown list in vertical rows on hover */
+            display: none; /* Hide the dropdown list in vertical rows on hover */
         }
         .main-content {
             position: absolute;
@@ -67,8 +64,8 @@
             text-align: center;
         }
         .main-btn, .secondary-link {
-            padding: 15px; /* Make all the buttons same size */
-            background-color: #28a745; /* Change button color to green */
+            padding: 10px 20px; /* Reverted back to original button padding */
+            background-color: #28a745; /* Reverted back to original button color */
             color: white;
             border: none;
             border-radius: 5px;
@@ -76,13 +73,13 @@
             font-size: 1.2em;
             text-decoration: none;
             display: inline-block;
-            margin: 10px 0;
+            margin: 10px 10px; /* Adjusted margin to provide equal spacing */
         }
         .main-btn:hover, .secondary-link:hover {
-            background-color: #218838; /* Change button color on hover */
+            background-color: #218838; /* Reverted back to original button color on hover */
         }
         .login-btn {
-            padding: 15px; /* Make all the buttons same size */
+            padding: 10px 20px; /* Reverted back to original button padding */
             background-color: #6c757d;
             color: white;
             border: none;
@@ -91,7 +88,7 @@
             font-size: 1.2em;
             text-decoration: none;
             display: inline-block;
-            margin: 10px 0;
+            margin: 10px 10px; /* Adjusted margin to provide equal spacing */
         }
         .login-btn:hover {
             background-color: #464e55;
@@ -130,5 +127,5 @@
     </main>
     <script>
         // The hover effect for the Login button will be handled in main.css
-    </script> 
+    </script>
 </body>
