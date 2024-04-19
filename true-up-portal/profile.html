@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@
             height: 100vh;
             margin: 0;
         }
+
         .container {
             max-width: 600px;
             padding: 20px;
@@ -25,19 +27,19 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .form-group {
             margin-bottom: 20px;
             display: flex;
-            align-items: center;
-            justify-content: center;
             flex-direction: column;
         }
+
         label {
             width: 100%;
             margin-bottom: 5px;
             font-weight: bold;
-            text-align: center;
         }
+
         input[type="text"],
         input[type="email"],
         textarea,
@@ -49,6 +51,7 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+
         button {
             width: 30%;
             padding: 10px;
@@ -60,8 +63,14 @@
             cursor: pointer;
             align-self: flex-end;
         }
+
+        .sector-selection {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .selectable-label {
-            display: inline-block;
+            margin-right: 10px;
             margin-bottom: 10px;
             padding: 8px 12px;
             border: 1px solid #ccc;
@@ -69,21 +78,19 @@
             cursor: pointer;
             text-align: center;
         }
+
         .selectable-label.selected {
             background-color: #007bff;
             color: #fff;
         }
+
         /* New styling */
-        #workLocations,
-        #companyStages,
-        .sector-selection {
-            width: 70%;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
+        #userDetailsForm .form-group {
+            align-items: flex-start;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -101,9 +108,9 @@
                 </div>
                 <div class="form-group">
                     <label for="jobFamily">Job Family:</label>
-                    <div>
-                        <label class="selectable-label">Option 1</label>
-                        <label class="selectable-label">Option 2</label>
+                    <div class="sector-selection">
+                        <span class="selectable-label">Option 1</span>
+                        <span class="selectable-label">Option 2</span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -112,37 +119,38 @@
                 </div>
                 <div class="form-group">
                     <label for="currentLevel">Current Level:</label>
-                    <div>
-                        <label class="selectable-label">Entry</label>
-                        <label class="selectable-label">Mid</label>
-                        <label class="selectable-label">Senior</label>
+                    <div class="sector-selection">
+                        <span class="selectable-label">Entry</span>
+                        <span class="selectable-label">Mid</span>
+                        <span class="selectable-label">Senior</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="linkedinUrl">LinkedIn URL:</label>
-                    <input type="url" id="linkedinUrl" name="linkedinUrl" pattern="https://.*" title="Please enter a valid LinkedIn URL">
+                    <input type="url" id="linkedinUrl" name="linkedinUrl" pattern="https://.*"
+                        title="Please enter a valid LinkedIn URL">
                 </div>
                 <div class="form-group">
                     <label for="jobStatus">Job Seeking Status:</label>
-                    <div>
-                        <label class="selectable-label">Seeking</label>
-                        <label class="selectable-label">Not Seeking</label>
+                    <div class="sector-selection">
+                        <span class="selectable-label">Seeking</span>
+                        <span class="selectable-label">Not Seeking</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="workLocations">Preferred Work Locations:</label>
-                    <div>
-                        <label class="selectable-label">Location 1</label>
-                        <label class="selectable-label">Location 2</label>
-                        <label class="selectable-label">Location 3</label>
+                    <div class="sector-selection">
+                        <span class="selectable-label">Location 1</span>
+                        <span class="selectable-label">Location 2</span>
+                        <span class="selectable-label">Location 3</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="companyStages">Company Stages of Interest:</label>
-                    <div>
-                        <label class="selectable-label">Stage 1</label>
-                        <label class="selectable-label">Stage 2</label>
-                        <label class="selectable-label">Stage 3</label>
+                    <div class="sector-selection">
+                        <span class="selectable-label">Stage 1</span>
+                        <span class="selectable-label">Stage 2</span>
+                        <span class="selectable-label">Stage 3</span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -167,7 +175,7 @@
                 updateSelectedSectors();
             });
         });
-        
+
         function updateSelectedSectors() {
             const selectedLabels = document.querySelectorAll('.selectable-label.selected');
             const selectedSectors = Array.from(selectedLabels).map((label) => label.getAttribute('data-sector'));
