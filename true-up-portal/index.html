@@ -30,6 +30,7 @@
         }
         .header-nav {
             display: flex;
+            flex-direction: column; /* Changed to display buttons one below the other */
             gap: 15px;
         }
         .nav-link {
@@ -39,6 +40,13 @@
             padding: 15px; /* Make all the buttons same size */
             display: flex;
             flex-direction: column; /* Dropdown list will be displayed in vertical rows */
+            background-color: #28a745; /* Change button color to green */
+            margin: 10px 0; /* Add margin to the buttons */
+            border-radius: 5px; /* Add border-radius to the buttons */
+            color: white; /* Change text color to white */
+        }
+        .nav-link:hover {
+            background-color: #218838; /* Change button color on hover */
         }
         .dropdown-content {
             display: none; /* Hide the dropdown list by default */
@@ -60,7 +68,7 @@
         }
         .main-btn, .secondary-link {
             padding: 15px; /* Make all the buttons same size */
-            background-color: #007BFF;
+            background-color: #28a745; /* Change button color to green */
             color: white;
             border: none;
             border-radius: 5px;
@@ -71,7 +79,7 @@
             margin: 10px 0;
         }
         .main-btn:hover, .secondary-link:hover {
-            background-color: #0056b3;
+            background-color: #218838; /* Change button color on hover */
         }
         .login-btn {
             padding: 15px; /* Make all the buttons same size */
@@ -122,4 +130,5 @@
     </main>
     <script>
         // The hover effect for the Login button will be handled in main.css
-    </script>
+    </script> 
+</body>
