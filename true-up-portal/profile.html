@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Details Form - Job Portal</title>
-    <link rel="stylesheet" href="styles/main.css">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -29,9 +28,11 @@
         }
         label {
             display: inline-block;
-            width: 30%;
+            width: 20%; /* Modified */
+            margin-right: 5px; /* Added for alignment */
             margin-bottom: 5px;
             font-weight: bold;
+            text-align: right; /* Added for alignment */
         }
         input[type="text"],
         input[type="email"],
@@ -45,7 +46,7 @@
             box-sizing: border-box;
         }
         button {
-            width: 100%;
+            width: 30%; /* Modified */
             padding: 10px;
             margin-top: 10px;
             background-color: #007bff;
@@ -53,6 +54,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            align-self: flex-end; /* Added for alignment */
         }
         .selectable-label {
             display: inline-block;
@@ -74,6 +76,7 @@
             width: 70%; /* Added */
             display: flex; /* Added */
             align-items: center; /* Added */
+            margin-bottom: 10px; /* Added for spacing */
         }
     </style>
 </head>
@@ -85,73 +88,70 @@
         <section class="form-section">
             <form id="userDetailsForm">
                 <div class="form-group">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name" pattern="[A-Za-z]+" title="Please enter a valid first name (no numbers or special characters)">
+                    <label for="firstName" style="width: 20%; text-align: right;">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name" pattern="[A-Za-z]+" title="Please enter a valid first name (no numbers or special characters)" style="width: 70%;">
                 </div>
                 <div class="form-group">
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name" pattern="[A-Za-z]+" title="Please enter a valid last name (no numbers or special characters)">
+                    <label for="lastName" style="width: 20%; text-align: right;">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name" pattern="[A-Za-z]+" title="Please enter a valid last name (no numbers or special characters)" style="width: 70%;">
                 </div>
                 <div class="form-group">
-                    <label for="jobFamily">Job Family:</label>
-                    <select id="jobFamily" name="jobFamily">
-                        <option value="" disabled selected>Select your job family</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
+                    <label for="jobFamily" style="width: 20%; text-align: right;">Job Family:</label>
+                    <div style="width: 70%; display: flex; align-items: center;"> <!-- Changed to label selector -->
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Option 1</label>
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Option 2</label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="currentCompany">Current Company:</label>
-                    <input type="text" id="currentCompany" name="currentCompany">
+                    <label for="currentCompany" style="width: 20%; text-align: right;">Current Company:</label>
+                    <input type="text" id="currentCompany" name="currentCompany" style="width: 70%;">
                 </div>
                 <div class="form-group">
-                    <label for="currentLevel">Current Level:</label>
-                    <select id="currentLevel" name="currentLevel">
-                        <option value="" disabled selected>Select your current level</option>
-                        <option value="entry">Entry</option>
-                        <option value="mid">Mid</option>
-                        <option value="senior">Senior</option>
-                    </select>
+                    <label for="currentLevel" style="width: 20%; text-align: right;">Current Level:</label>
+                    <div style="width: 70%; display: flex; align-items: center;"> <!-- Changed to label selector -->
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Entry</label>
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Mid</label>
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Senior</label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="linkedinUrl">LinkedIn URL:</label>
-                    <input type="url" id="linkedinUrl" name="linkedinUrl" pattern="https://.*" title="Please enter a valid LinkedIn URL">
+                    <label for="linkedinUrl" style="width: 20%; text-align: right;">LinkedIn URL:</label>
+                    <input type="url" id="linkedinUrl" name="linkedinUrl" pattern="https://.*" title="Please enter a valid LinkedIn URL" style="width: 70%;">
                 </div>
                 <div class="form-group">
-                    <label for="jobStatus">Job Seeking Status:</label>
-                    <select id="jobStatus" name="jobStatus">
-                        <option value="" disabled selected>Select your job seeking status</option>
-                        <option value="seeking">Seeking</option>
-                        <option value="not-seeking">Not Seeking</option>
-                    </select>
+                    <label for="jobStatus" style="width: 20%; text-align: right;">Job Seeking Status:</label>
+                    <div style="width: 70%; display: flex; align-items: center;"> <!-- Changed to label selector -->
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Seeking</label>
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Not Seeking</label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="workLocations">Preferred Work Locations:</label>
-                    <select id="workLocations" name="workLocations" multiple>
-                        <option value="location1">Location 1</option>
-                        <option value="location2">Location 2</option>
-                        <option value="location3">Location 3</option>
-                    </select>
+                    <label for="workLocations" style="width: 20%; text-align: right;">Preferred Work Locations:</label>
+                    <div style="width: 70%; display: flex; align-items: center;"> <!-- Changed to label selector -->
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Location 1</label>
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Location 2</label>
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Location 3</label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="companyStages">Company Stages of Interest:</label>
-                    <select id="companyStages" name="companyStages" multiple>
-                        <option value="stage1">Stage 1</option>
-                        <option value="stage2">Stage 2</option>
-                        <option value="stage3">Stage 3</option>
-                    </select>
+                    <label for="companyStages" style="width: 20%; text-align: right;">Company Stages of Interest:</label>
+                    <div style="width: 70%; display: flex; align-items: center;"> <!-- Changed to label selector -->
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Stage 1</label>
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Stage 2</label>
+                        <label class="selectable-label" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Stage 3</label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="techSectors">Tech Sectors of Interest:</label>
-                    <div class="sector-selection">
-                        <span class="selectable-label" data-sector="AI">Artificial Intelligence</span>
-                        <span class="selectable-label" data-sector="DS">Data Science</span>
-                        <span class="selectable-label" data-sector="CS">Cybersecurity</span>
+                    <label for="techSectors" style="width: 20%; text-align: right;">Tech Sectors of Interest:</label>
+                    <div class="sector-selection" style="width: 70%; display: flex; align-items: center;"> <!-- Changed to label selector -->
+                        <span class="selectable-label" data-sector="AI" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Artificial Intelligence</span>
+                        <span class="selectable-label" data-sector="DS" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Data Science</span>
+                        <span class="selectable-label" data-sector="CS" style="margin-right: 10px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">Cybersecurity</span>
                         <!-- Add more sectors as needed -->
                     </div>
                     <input type="hidden" id="selectedSectorsInput" name="selectedSectors">
                 </div>
-                <button type="submit" id="submitFormBtn" disabled>Submit Your Profile</button>
+                <button type="submit" id="submitFormBtn" disabled style="width: 30%; align-self: flex-end;">Submit Your Profile</button>
             </form>
         </section>
     </div>
