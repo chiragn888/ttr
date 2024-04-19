@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Profile - True Up</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="js/interactivity.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -16,81 +64,61 @@
             <form id="profileForm">
                 <!-- Existing form groups -->
                 <div class="form-group">
-                    <label for="name">Name:</label>
+                    <label for="name">First Name:</label>
                     <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
+
+                <!-- Updated form groups with grouping and whitespace -->
                 <div class="form-group">
-                    <label for="bio">Bio:</label>
-                    <textarea id="bio" name="bio"></textarea>
-                </div>
-                
-                <!-- New form groups -->
-                <div class="form-group">
-                    <label for="personalInfo">Personal Information:</label>
+                    <h2>Personal Information</h2>
                     <input type="text" id="personalInfo" name="personalInfo" placeholder="Enter personal information" required>
                 </div>
                 <div class="form-group">
-                    <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                    <h2>Career Information</h2>
+                    <input type="text" id="currentCompany" name="currentCompany" placeholder="Enter current company" required>
+                    <input type="text" id="currentLevel" name="currentLevel" placeholder="Enter current level" required>
+                    <input type="url" id="linkedinURL" name="linkedinURL" placeholder="Enter LinkedIn URL (optional)">
                 </div>
                 <div class="form-group">
-                    <label for="employmentHistory">Employment History:</label>
-                    <input type="text" id="employmentHistory" name="employmentHistory" placeholder="Enter your employment history" required>
-                </div>
-                <div class="form-group">
-                    <label for="education">Education:</label>
-                    <input type="text" id="education" name="education" placeholder="Enter your education" required>
-                </div>
-                <div class="form-group">
-                    <label for="skills">Skills:</label>
-                    <input type="text" id="skills" name="skills" placeholder="Enter your skills" required>
-                </div>
-                <div class="form-group">
-                    <label for="preferences">Preferences:</label>
-                    <select id="preferences" name="preferences">
-                        <option value="">Select your preferences</option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <!-- Add more options as needed -->
+                    <h2>Status and Preferences</h2>
+                    <select id="jobStatus" name="jobStatus">
+                        <option value="seeking">Actively Seeking</option>
+                        <option value="open">Open to Opportunities</option>
+                        <option value="notSeeking">Not Currently Seeking</option>
                     </select>
+                    <input type="text" id="workLocations" name="workLocations" placeholder="Enter preferred work locations" required>
+                    <input type="text" id="companyStages" name="companyStages" placeholder="Enter company stages of interest" required>
+                    <input type="text" id="techSectors" name="techSectors" placeholder="Enter tech sectors of interest" required>
                 </div>
                 <div class="form-group">
-                    <label for="additionalInfo">Additional Information:</label>
-                    <textarea id="additionalInfo" name="additionalInfo" placeholder="Enter any additional information"></textarea>
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" placeholder="Enter a brief bio"></textarea>
                 </div>
+
+                <!-- Additional form groups -->
                 <div class="form-group">
                     <label for="resume">Resume:</label>
                     <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
                 </div>
-                <button type="submit" id="updateProfileBtn" disabled>Update</button>
+                <button type="submit" id="updateProfileBtn" disabled>Submit Your Profile</button>
             </form>
         </section>
     </div>
+    <script src="js/interactivity.js" defer></script>
     <script>
-        // JavaScript code to enable the submit button once validation is passed
-        document.getElementById('profileForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            updateProfile({
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                bio: document.getElementById('bio').value,
-                // Add new fields to the updateProfile function call
-                personalInfo: document.getElementById('personalInfo').value,
-                address: document.getElementById('address').value,
-                employmentHistory: document.getElementById('employmentHistory').value,
-                education: document.getElementById('education').value,
-                skills: document.getElementById('skills').value,
-                preferences: document.getElementById('preferences').value,
-                additionalInfo: document.getElementById('additionalInfo').value,
-                resume: document.getElementById('resume').files[0] // Assuming updateProfile can handle File objects
-            });
+        const form = document.getElementById('profileForm');
+        form.addEventListener('input', function (event) {
+            // Field validation and enabling/disabling the submit button
+            const isValid = form.checkValidity();
+            document.getElementById('updateProfileBtn').disabled = !isValid;
         });
-
-        // Additional JavaScript code for form validation and enabling the submit button
-        // This should be implemented in the 'js/interactivity.js' file
     </script>
 </body>
