@@ -73,6 +73,21 @@
         .main-btn:hover, .secondary-link:hover {
             background-color: #0056b3;
         }
+        .login-btn {
+            padding: 15px; /* Make all the buttons same size */
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .login-btn:hover {
+            background-color: #464e55;
+        }
     </style>
     <link rel="stylesheet" href="styles/main.css">
     <script src="js/interactivity.js" defer></script>
@@ -93,8 +108,7 @@
                     <a href="#">Link 3</a>
                 </div>
             </div>
-            <button class="nav-link main-btn">Hire on TrueUp</button>
-            <a href="login.html" class="nav-link">Log in</a>
+            <a href="login.html" class="nav-link login-btn">Log in</a>
             <button class="nav-link main-btn" onclick="window.location.href='register.html'">Join now</button>
         </nav>
     </header>
@@ -109,4 +123,3 @@
     <script>
         // The hover effect for the Login button will be handled in main.css
     </script>
-</body>
