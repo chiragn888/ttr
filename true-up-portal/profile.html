@@ -9,10 +9,11 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
+            line-height: 1.6;
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -22,119 +23,103 @@
         label {
             display: block;
             margin-bottom: 5px;
-            font-weight: bold; /* added font-weight for better visibility */
         }
-        input,
-        select,
+        input[type="text"],
+        input[type="email"],
         textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            margin-top: 5px;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
-        button[type="submit"] {
+        button {
+            display: block;
             width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            background-color: #1e90ff;
+            padding: 10px;
+            background-color: #007bff;
             color: #fff;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
-            margin-top: 20px;
-        }
-        button[type="submit"]:hover {
-            background-color: #1a75bb;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Job Portal</h1>
-            <button id="signOutBtn" style="float: right;">Sign Out</button>
+            <h1>User Details Form</h1>
         </header>
-        <section class="user-details-form">
-            <h2 style="text-align: center; font-weight: bold; margin-bottom: 15px;">User Details Form</h2>
-            <p style="text-align: center; font-style: italic; margin-bottom: 15px;">Please provide the following details to enhance your job search</p>
-
-            <!-- User Information Fields -->
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-            </div>
-            <div class="form-group">
-                <label for="jobFamily">Job Family</label>
-                <select id="jobFamily" name="jobFamily" required>
-                    <option value="businessDev">Business Development & Partnerships</option>
-                    <!-- Other job family options can be added here -->
-                </select>
-            </div>
-
-            <!-- Employment Details -->
-            <div class="form-group">
-                <label for="recentCompany">Current / Most Recent Company</label>
-                <input type="text" id="recentCompany" name="recentCompany" placeholder="Enter your current or most recent company" required>
-                <div style="margin-top: 10px;">
-                    <input type="checkbox" id="notListed"> <label for="notListed">My company is not listed</label>
-                    <input type="checkbox" id="noExperience"> <label for="noExperience">I have no work experience</label>
+        <section class="form-section">
+            <form id="userDetailsForm">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name" pattern="[A-Za-z]+" title="Please enter a valid first name (no numbers or special characters)">
                 </div>
-                <div style="margin-top: 10px;">
-                    <label>Career Level:</label>
-                    <input type="radio" id="internship" name="careerLevel" value="internship"> <label for="internship">Internship</label>
-                    <input type="radio" id="manager" name="careerLevel" value="manager"> <label for="manager">Manager</label>
-                    <input type="radio" id="director" name="careerLevel" value="director"> <label for="director">Director</label>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name" pattern="[A-Za-z]+" title="Please enter a valid last name (no numbers or special characters)">
                 </div>
-            </div>
-
-            <!-- Professional Online Presence -->
-            <div class="form-group">
-                <label for="linkedinURL">LinkedIn Profile URL (Optional)</label>
-                <input type="url" id="linkedinURL" name="linkedinURL" placeholder="Enter your LinkedIn profile URL">
-            </div>
-
-            <!-- Job Seeking Status -->
-            <div class="form-group">
-                <label>Job Seeking Status:</label>
-                <input type="checkbox" id="activelyLooking"> <label for="activelyLooking">Actively looking</label><br>
-                <input type="checkbox" id="casuallyLooking"> <label for="casuallyLooking">Casually looking</label><br>
-                <input type="checkbox" id="notLooking"> <label for="notLooking">Not looking</label>
-            </div>
-
-            <!-- Working Preferences -->
-            <div class="form-group">
-                <input type="checkbox" id="showRemoteJobs"> <label for="showRemoteJobs">Show me remote jobs</label><br>
-                <input type="text" id="remoteWorkLocations" name="remoteWorkLocations" placeholder="Enter countries available for remote work">
-                <input type="text" id="jobLocations" name="jobLocations" placeholder="Enter specific job locations preferred">
-            </div>
-
-            <!-- Sector and Company Interest -->
-            <div class="form-group">
-                <label for="companyStages">Company Stages of Interest</label>
-                <input type="text" id="companyStages" name="companyStages" placeholder="Enter company stages of interest">
-                <label for="sectorInterest">Tech Sectors of Interest</label>
-                <input type="text" id="sectorInterest" name="sectorInterest" placeholder="Enter tech sectors of interest">
-            </div>
-
-            <div class="form-group">
-                <button type="submit" disabled>Submit Your Profile</button>
-            </div>
+                <div class="form-group">
+                    <label for="jobFamily">Job Family:</label>
+                    <select id="jobFamily" name="jobFamily">
+                        <option value="" disabled selected>Select your job family</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="currentCompany">Current Company:</label>
+                    <input type="text" id="currentCompany" name="currentCompany">
+                </div>
+                <div class="form-group">
+                    <label for="currentLevel">Current Level:</label>
+                    <select id="currentLevel" name="currentLevel">
+                        <option value="" disabled selected>Select your current level</option>
+                        <option value="entry">Entry</option>
+                        <option value="mid">Mid</option>
+                        <option value="senior">Senior</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="linkedinUrl">LinkedIn URL:</label>
+                    <input type="url" id="linkedinUrl" name="linkedinUrl" pattern="https://.*" title="Please enter a valid LinkedIn URL">
+                </div>
+                <div class="form-group">
+                    <label for="jobStatus">Job Seeking Status:</label>
+                    <select id="jobStatus" name="jobStatus">
+                        <option value="" disabled selected>Select your job seeking status</option>
+                        <option value="seeking">Seeking</option>
+                        <option value="not-seeking">Not Seeking</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="workLocations">Preferred Work Locations:</label>
+                    <select id="workLocations" name="workLocations" multiple>
+                        <option value="location1">Location 1</option>
+                        <option value="location2">Location 2</option>
+                        <option value="location3">Location 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="companyStages">Company Stages of Interest:</label>
+                    <select id="companyStages" name="companyStages" multiple>
+                        <option value="stage1">Stage 1</option>
+                        <option value="stage2">Stage 2</option>
+                        <option value="stage3">Stage 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="techSectors">Tech Sectors of Interest:</label>
+                    <select id="techSectors" name="techSectors" multiple>
+                        <option value="sector1">Sector 1</option>
+                        <option value="sector2">Sector 2</option>
+                        <option value="sector3">Sector 3</option>
+                    </select>
+                </div>
+                <button type="submit" id="submitFormBtn" disabled>Submit Your Profile</button>
+            </form>
         </section>
     </div>
-    <script src="js/interactivity.js" defer></script>
-    <script>
-        const signOutBtn = document.getElementById('signOutBtn');
-        signOutBtn.addEventListener('click', function() {
-            // Trigger sign-out functionality
-        });
-
-        const form = document.querySelector('.user-details-form');
-        form.addEventListener('input', function (event) {
-            // Field validation and interactivity
-        });
-    </script>
+    <script src="js/form-validation.js" defer></script>
 </body>
