@@ -16,7 +16,7 @@ body {
 
 /* Utility classes */
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
 }
@@ -43,59 +43,59 @@ form {
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .input-field,
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 /* Button styling */
 button {
     display: inline-block;
-    background: #007bff;
+    background: #007fff;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 12px 24px;
+    margin-top: 12px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #0056b9;
 }
 
 /* Job card styling */
 .job-card {
     background: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
 .job-card h2 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .job-card p {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 /* Login and Profile container */
 .login-container,
 .profile-update-form {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 24px;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -103,7 +103,7 @@ button:hover {
 input:focus,
 textarea:focus,
 button:focus {
-    outline: 2px solid #007bff;
+    outline: 3px solid #007bff;
 }
 
 /* Responsive design */
