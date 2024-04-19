@@ -106,8 +106,10 @@ button:focus {
     outline: 3px solid #007bff;
 }
 
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
         width: 95%;
     }
+}
