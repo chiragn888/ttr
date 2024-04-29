@@ -51,22 +51,24 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-		.login-btn, .signup-btn, .main-btn, .secondary-link {
+        .login-btn, .signup-btn, .main-btn, .secondary-link {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+			text-decoration: none;
         }
         .login-btn, .signup-btn {
             background-color: #007BFF;
             color: #fff;
         }
         .main-btn {
-            background-color: #fff;
-            border: 1px solid #007BFF;
-            color: #007BFF;
+            background-color: #007BFF;
+            color: #fff;
             margin-right: 20px;
+            border: none; /* added */
+            outline: none; /* added */
         }
         .secondary-link {
             color: #007BFF;
