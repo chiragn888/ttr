@@ -1,5 +1,3 @@
-Here is the entire file with the requested modifications:
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,13 +6,26 @@ Here is the entire file with the requested modifications:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>True Up - Job Portal</title>
     <style>
-        /* The existing CSS styles */
         body {
             font-family: Arial, sans-serif;
             color: #000;
             background-color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        /* ... */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+        /* ... (existing CSS styles) ... */
     </style>
     <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -35,23 +46,23 @@ Here is the entire file with the requested modifications:
                     <a href="#">Link 3</a>
                 </div>
             </div>
-            <button id="joinNowBtn" class="main-btn" onclick="window.location.href='login.html'">JOIN NOW</button>
-            <a href="job-listing.html" class="secondary-link">Search jobs</a>
+            <a href="login.html" class="nav-link login-btn">Log in</a>
+            <a href="signup.html" class="nav-link signup-btn">Sign Up</a>
         </nav>
     </header>
     <main>
         <div class="main-content">
             <h1 style="font-size: 3em; font-weight: bold;">Don't miss your dream tech job</h1>
             <p>We use AI to scan 215,288 top tech jobs in real-time. Get the inside track on the best ones for you.</p>
+            <button id="joinNowBtn" class="main-btn" onclick="window.location.href='login.html'">JOIN NOW</button>
             <a href="job-listing.html" class="secondary-link">Search jobs</a>
         </div>
     </main>
     <footer style="text-align: center; padding: 20px; background-color: #f1f1f1;">
-      The CareerOS for people in tech.
+        The CareerOS for people in tech.
     </footer>
     <script src="js/interactivity.js" defer></script>
     <script>
-      // The hover effect for the Login button will be handled in main.css
+        // The hover effect for the Login button will be handled in main.css
     </script>
 </body>
-</html>
