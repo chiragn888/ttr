@@ -1,3 +1,5 @@
+Here is the entire file with the requested modifications:
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +9,11 @@
     <title>True Up - Job Portal</title>
     <style>
         /* The existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #000;
+            background-color: #fff;
+        }
         /* ... */
     </style>
     <link rel="stylesheet" href="styles/main.css">
@@ -28,15 +35,14 @@
                     <a href="#">Link 3</a>
                 </div>
             </div>
-            <a href="login.html" class="nav-link login-btn">Log in</a>
-            <a href="signup.html" class="nav-link signup-btn">Sign Up</a>
+            <button id="joinNowBtn" class="main-btn" onclick="window.location.href='login.html'">JOIN NOW</button>
+            <a href="job-listing.html" class="secondary-link">Search jobs</a>
         </nav>
     </header>
     <main>
         <div class="main-content">
             <h1 style="font-size: 3em; font-weight: bold;">Don't miss your dream tech job</h1>
             <p>We use AI to scan 215,288 top tech jobs in real-time. Get the inside track on the best ones for you.</p>
-            <button id="joinNowBtn" class="main-btn" onclick="window.location.href='login.html'">JOIN NOW</button>
             <a href="job-listing.html" class="secondary-link">Search jobs</a>
         </div>
     </main>
@@ -48,3 +54,4 @@
       // The hover effect for the Login button will be handled in main.css
     </script>
 </body>
+</html>
