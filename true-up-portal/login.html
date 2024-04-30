@@ -1,44 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login to True Up</title>
+    <title>True Up - Job Portal</title>
+    <style>
+        /* ... existing styles ... */
+    </style>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="js/interactivity.js" defer></script>
 </head>
+
 <body>
-    <div class="login-container">
-        <h1 class="login-title">Login to True Up</h1>
-        <form id="loginForm" onsubmit="handleLogin(event)">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required class="input-field">
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required class="input-field">
-            </div>
-            <button type="submit" class="login-button">Login</button>
-        </form>
-    </div>
+    <header>
+        <div class="logo-container">
+            <!-- Updated logo image path and alt text -->
+            <img src="images/bird-sitting-on-a-tree-branch-ink-black-and-white-illustration-PCWJJD.jpg" alt="Bird sitting on a tree branch, black and white illustration" class="logo">
+        </div>
+        <!-- ... rest of the header content ... -->
+    </header>
+    <!-- ... rest of the body content ... -->
+    <footer style="text-align: center; padding: 20px; background-color: #f1f1f1;">
+        The CareerOS for people in tech.
+    </footer>
+    <script src="js/interactivity.js" defer></script>
     <script>
-        // Assuming the existence of a function handleLogin in interactivity.js
-        function handleLogin(event) {
-            event.preventDefault(); // Prevent form from submitting normally
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            // Placeholder for authentication logic
-            // In a real application, here you would send the username and password to the server
-            // For demonstration, we'll just log to the console and redirect on success
-            console.log(`Logging in with username: ${username} and password: ${password}`);
-            
-            // Simulate successful login
-            alert('Login successful!');
-            window.location.href = 'profile.html'; // Redirect to profile page on successful login
-        }
+        // The hover effect for the Login button will be handled in main.css
     </script>
 </body>
-</html>
-```
