@@ -1,5 +1,3 @@
-
-
 // Disclaimer: The following interactions are simulated for demonstration purposes. 
 // In a real application, interactions such as form submissions and updates would require server communication logic or API calls.
 
