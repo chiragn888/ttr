@@ -11,21 +11,18 @@ body {
     line-height: 1.6;	
 }
 
-/* Utility classes */	
 .container {	
     width: 90%;	
     margin: auto;	
     overflow: hidden;	
 }
 
-/* Header styles */	
 header h1 {	
     text-align: center;	
     margin: 20px 0;	
     color: #333;	
 }
 
-/* Form styling */	
 form {	
     background: #ffffff;	
     padding: 20px;	
@@ -51,7 +48,6 @@ textarea {
     border-radius: 6px;	
 }
 
-/* Button styling */	
 button {	
     display: inline-block;	
     background: #007fff;	
@@ -68,7 +64,6 @@ button:hover {
     background: #0056b9;	
 }
 
-/* Job card styling */	
 .job-card {	
     background: #ffffff;	
     padding: 24px;	
@@ -85,7 +80,6 @@ button:hover {
     margin-bottom: 6px;	
 }
 
-/* Login and Profile container */	
 .login-container,	
 .profile-update-form {	
     max-width: 600px;	
@@ -96,23 +90,22 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);	
 }
 
-/* Accessibility improvements */	
 input:focus,	
 textarea:focus,	
 button:focus {	
     outline: 3px solid #007bff;	
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .container {
         width: 95%;
     }
 }
 
-/* Footer styles */
 footer {
     background-color: #000;
     color: #fff;
     padding: 20px;
     text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
