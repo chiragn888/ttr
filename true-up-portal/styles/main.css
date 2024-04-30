@@ -111,7 +111,7 @@ button:focus {
 
 footer {
     background-color: #000;
-    color: #fff;
+    color: #000; /* Modified color to black from #fff */
     padding: 20px;
     text-align: center;
     text-shadow: none;
