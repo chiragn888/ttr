@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="login-container">
-        <h1 class="login-title">Login to Up Work</h1>
+        <h1 class="login-title">Employee Login</h1>
         <form id="loginForm" onsubmit="handleLogin(event)">
             <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required class="input-field">
+                <label for="username">Email</label>
+                <input type="email" id="username" name="username" required class="input-field">
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -21,20 +21,18 @@
             </div>
             <button type="submit" class="login-button">Login</button>
         </form>
-        <a href="README.md" class="learn-more-link">Learn more about Up Work</a>
     </div>
     <script>
         function handleLogin(event) {
-            event.preventDefault(); 
+            event.preventDefault();
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             
-            console.log(`Logging in with username: ${username} and password: ${password}`);
+            console.log(`Logging in with email: ${username} and password: ${password}`);
             
             alert('Login successful!');
-            window.location.href = 'profile.html'; 
+            window.location.href = 'profile.html';
         }
     </script>
 </body>
 </html>
-```
