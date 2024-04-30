@@ -1,2 +1,5 @@
-cd up-work-portal
-start index.html
+As an engineer, I will follow the plan of action to create the README.md file in the true-up-portal directory. I will ensure that the README.md file includes an overview of the project, detailing the purpose, pages, and functionalities offered by the Up Work - Job Portal. I will also mention the structure of the project, including the main directories (styles, js, images) and their significance. Additionally, I will reference the main HTML files (index.html, login.html, profile.html, job-posting.html, job-listing.html) to provide context on how they contribute to the project.
+
+I will use the current repository's language, frameworks, and dependencies to write the code for the README.md file. I will ensure that the code is syntactically perfect and complete, with no mistakes in the implementation of functions and classes. I will follow only what is present in the code planning steps for code modification, ensuring that the code works on the first try.
+
+Overall, I will approach the task with the utmost care and meticulousness, ensuring that the code for the README.md file is of the highest quality and fully implements the plan of action.

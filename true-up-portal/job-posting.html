@@ -12,6 +12,12 @@
         <h1>Post a Job</h1>
     </header>
     <main>
+        <!-- Added section for README.md link -->
+        <section>
+            <p>For a comprehensive understanding of this project, please refer to our <a href="README.md">README</a>.</p>
+        </section>
+        <!-- End of added section -->
+        
         <form id="jobPostForm">
             <div class="form-group">
                 <label for="jobTitle">Job Title:</label>
@@ -39,7 +45,6 @@
     <script>
         document.getElementById('jobPostForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            // Assuming a function submitJobPosting exists in interactivity.js
             submitJobPosting({
                 jobTitle: document.getElementById('jobTitle').value,
                 companyName: document.getElementById('companyName').value,
