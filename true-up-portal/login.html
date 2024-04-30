@@ -6,33 +6,11 @@
     <title>Login to Up Work</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="js/interactivity.js" defer></script>
-    <script>
-        // Using addEventListener instead of inline event handler
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('loginForm').addEventListener('submit', handleLogin);
-        });
-
-        // Refactored handleLogin function
-        function handleLogin(event) {
-            event.preventDefault(); // Prevent form from submitting normally
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            // Placeholder for authentication logic
-            // In a real application, here you would send the username and password to the server
-            // For demonstration, we'll just log to the console and redirect on success
-            console.log(`Logging in with username: ${username} and password: ${password}`);
-            
-            // Simulate successful login
-            alert('Login successful!');
-            window.location.href = 'profile.html'; // Redirect to profile page on successful login
-        }
-    </script>
 </head>
 <body>
     <div class="login-container">
         <h1 class="login-title">Login to Up Work</h1>
-        <form id="loginForm">
+        <form id="loginForm" onsubmit="handleLogin(event)">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required class="input-field">
@@ -42,7 +20,23 @@
                 <input type="password" id="password" name="password" required class="input-field">
             </div>
             <button type="submit" class="login-button">Login</button>
+            <div class="input-group">
+                <label for="remember-me">Remember Me</label>
+                <input type="checkbox" id="remember-me">
+            </div>
         </form>
     </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            console.log(`Logging in with username: ${username} and password: ${password}`);
+            
+            alert('Login successful!');
+            window.location.href = 'profile.html';
+        }
+    </script>
 </body>
 </html>
