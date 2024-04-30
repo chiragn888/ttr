@@ -1,2 +1,2 @@
-cd true-up-portal
+cd up-work-portal
 start index.html
