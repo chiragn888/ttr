@@ -53,6 +53,17 @@
         button:hover {
             background-color: #45a049;
         }
+        .readme-reference {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .readme-reference a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .readme-reference a:hover {
+            text-decoration: underline;
+        }
     </style>
     <script src="js/interactivity.js" defer></script>
 </head>
@@ -77,6 +88,9 @@
                 </div>
                 <button type="submit" id="updateProfileBtn">Update</button>
             </form>
+            <p class="readme-reference">
+                For more information on project functionalities, please visit our <a href="README.md">README</a>.
+            </p>
         </section>
     </div>
     <script>
@@ -90,3 +104,4 @@
         });
     </script>
 </body>
+</html>

@@ -1,2 +1,2 @@
-cd up-work-portal
-start index.html
+- cd up-work-portal
+- start index.html

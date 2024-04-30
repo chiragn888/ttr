@@ -23,18 +23,13 @@
         </form>
     </div>
     <script>
-        // Assuming the existence of a function handleLogin in interactivity.js
         function handleLogin(event) {
             event.preventDefault(); // Prevent form from submitting normally
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             
-            // Placeholder for authentication logic
-            // In a real application, here you would send the username and password to the server
-            // For demonstration, we'll just log to the console and redirect on success
             console.log(`Logging in with username: ${username} and password: ${password}`);
             
-            // Simulate successful login
             alert('Login successful!');
             window.location.href = 'profile.html'; // Redirect to profile page on successful login
         }
