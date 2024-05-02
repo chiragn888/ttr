@@ -102,6 +102,17 @@ button:focus {
     outline: 3px solid #007bff;
 }
 
+.navbar-link {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #007fff;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -110,9 +121,10 @@ button:focus {
 
 footer {
     background-color: #000;
-    color: #000; /* Modified color to black from #fff */
+    color: #fff;
     padding: 20px;
     text-align: center;
     text-shadow: none;
     z-index: 1000;
     position: relative;
+}
