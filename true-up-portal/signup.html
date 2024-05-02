@@ -1,5 +1,33 @@
-As a meticulous engineer, I will carefully follow the plan of action to create the signup.html file and implement the necessary steps. I will use HTML for creating the file and include form elements for email-id, username, password, confirm password, and domain as specified. I will also add a form submission button and import the interactivity.js file using a script tag to handle form submissions and validations.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+</head>
+<body>
+  <form id="signupForm" action="submitForm()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
 
-I will ensure that the form has id attributes consistent with those expected by the interactivity.js functions for seamless integration. Additionally, I will pay close attention to the current repository's language, frameworks, and dependencies to ensure that the code is compatible and follows the existing standards.
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
 
-Once the code is written, I will thoroughly test it to ensure that it works on the first try and is syntactically perfect and complete. I will also make sure that every function and class is fully implemented without any mistakes. My utmost care for the code will guarantee that it meets the requirements and functions as intended.
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+    <label for="domain">Domain:</label>
+    <select id="domain" name="domain">
+      <option value="@example.com">@example.com</option>
+      <option value="@test.com">@test.com</option>
+      <option value="@sample.com">@sample.com</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script src="interactivity.js"></script>
+</body>
