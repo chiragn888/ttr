@@ -82,7 +82,7 @@
     <label for="areaOfInterest">Area of Interest:</label>
     <input type="text" id="areaOfInterest" name="areaOfInterest" required><br><br>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onClick="redirectToJobListing()">
   </form>
 
   <script>
@@ -94,6 +94,10 @@
         return false;
       }
       return true;
+    }
+
+    function redirectToJobListing() {
+      window.location.href = "job-listing.html";
     }
   </script>
 </body>
