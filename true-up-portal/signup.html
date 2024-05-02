@@ -1,0 +1,19 @@
+function handleSignUp() {
+  // Retrieve form data
+  const email = document.getElementById('email').value;
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirmPassword').value;
+  const domain = document.getElementById('domain').value;
+
+  // Perform data validation
+  if (password !== confirmPassword) {
+    alert('Passwords do not match');
+    return false;
+  }
+
+  // Perform sign-up process
+  // (This part can be further implemented based on the specific requirements)
+
+  return true; // To submit the form
+}
